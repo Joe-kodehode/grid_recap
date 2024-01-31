@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#grid-container {
+  gap: 30px;
+  display: grid;
+  width: 100vw;
+  height: 600px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: repeat(6, 1fr);
+
+  /* Alternate way using grid-template-areas */
+  /* grid-template-areas:
+    "😎 😎 ⭐ 👻"
+    "🤷‍♂️ 😡 😡 👻";
+*/
+}
+/* 
+#sunglasses {
+  grid-area: 😎;
+  background-color: grey;
+}
+
+#star {
+  grid-area: ⭐;
+  background-color: yellow;
+}
+
+#ghost {
+  grid-area: 👻;
+  background-color: ligh;
+}
+
+#shrug {
+  grid-area: 🤷‍♂️;
+  background-color: blue;
+}
+
+#angry {
+  grid-area: 😡;
+  background-color: red;
+} */
+
+.box {
+  /* height: 100px; */
+  /* width: 100px; */
+  background-color: green;
+}
+
+#box-one {
+  background-color: blue;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: span 3;
+  z-index: 1;
+}
+
+#box-two {
+  background-color: red;
+  grid-column: 1 / 3;
+  grid-row: 4 / 6;
+}
+
+#box-three {
+  background-color: yellow;
+  grid-area: 1 / 3 / span 2 / span 2;
+}
